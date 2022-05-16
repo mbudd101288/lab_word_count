@@ -10,20 +10,23 @@ def word_count(file):
 
     for line in test_text:
         lin = line.rstrip()
-        print(lin)
+        
         line = lin.split(' ')
-        print(line)
+        
         #print(line)
         for words in line:
             words = words.split(' ')
-            print(words)
+            # print(words)
             
             for word in words:
 
-                if word not in word_count and word != ",":
-                    word_count[word] = 1
-                else:
-                    word_count[word] += 1
+                # if word not in word_count and word != ",":
+                #     word_count[word] = 1
+                # else:
+                #     word_count[word] += 1
+
+                word_count[word] = word_count.get(word, 0) + 1
+                # same as above if/else
 
 #                   new_word_count= word_count + word_count[word]
     for word in word_count:
